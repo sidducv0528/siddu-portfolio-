@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras } from "react-icons/si";
 import { FaDatabase, FaChartLine, FaChartArea, FaFileExcel, FaRobot, FaCode, FaBrain, FaNetworkWired, FaChartBar } from "react-icons/fa";
 
@@ -57,7 +57,7 @@ export function Skills() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15, scale: 0.95 },
     visible: { 
       opacity: 1, 
