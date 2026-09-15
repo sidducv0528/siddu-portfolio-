@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { TypewriterEffect } from "./ui/TypewriterEffect";
 import { ParticleBackground } from "./ui/ParticleBackground";
 import { ArrowRight, Download, Mail, Database, ChartBar, Activity, ChevronDown } from "lucide-react";
@@ -11,6 +11,32 @@ import Image from "next/image";
 export function Hero() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
 
   const handleDownload = () => {
     setIsResumeOpen(false);
@@ -159,7 +185,7 @@ export function Hero() {
         </motion.div>
 
         {/* Right Side: Visuals */}
-        <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center mt-8 lg:mt-0">
+        <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center mt-8 lg:mt-0" style={{ perspective: 1000 }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -173,14 +199,26 @@ export function Hero() {
               className="absolute w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-[60px] -z-10"
             />
 
-            <Image 
-              src="/images/projects/profile.jpg" 
-              alt="V Siddu" 
-              fill 
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain drop-shadow-[0_0_40px_rgba(120,0,255,0.2)] relative z-10" 
-              priority
-            />
+            <motion.div
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                rotateX,
+                rotateY,
+                transformStyle: "preserve-3d",
+              }}
+              className="relative w-full h-full flex items-center justify-center z-10"
+            >
+              <Image 
+                src="/images/projects/profile.jpg" 
+                alt="V Siddu" 
+                fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain drop-shadow-[0_0_40px_rgba(120,0,255,0.2)]" 
+                priority
+                style={{ transform: "translateZ(50px)" }}
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
