@@ -166,34 +166,12 @@ export function Hero() {
             transition={{ duration: 1 }}
             className="relative w-full h-full flex items-center justify-center"
           >
-            {/* Animated 3D Glowing Cube Behind Photo */}
-            <div className="absolute w-[400px] h-[400px] -z-10 [perspective:1200px] flex items-center justify-center">
-              <motion.div
-                animate={{
-                  rotateX: [0, 360],
-                  rotateY: [0, 360],
-                }}
-                transition={{
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="relative w-64 h-64 [transform-style:preserve-3d]"
-              >
-                {/* Front */}
-                <div className="absolute inset-0 border-2 border-cyan-400/50 shadow-[0_0_30px_rgba(34,211,238,0.4)_inset,0_0_30px_rgba(34,211,238,0.4)] [transform:translateZ(128px)] rounded-xl" />
-                {/* Back */}
-                <div className="absolute inset-0 border-2 border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.4)_inset,0_0_30px_rgba(168,85,247,0.4)] [transform:rotateY(180deg)_translateZ(128px)] rounded-xl" />
-                {/* Right */}
-                <div className="absolute inset-0 border-2 border-cyan-400/50 shadow-[0_0_30px_rgba(34,211,238,0.4)_inset,0_0_30px_rgba(34,211,238,0.4)] [transform:rotateY(90deg)_translateZ(128px)] rounded-xl" />
-                {/* Left */}
-                <div className="absolute inset-0 border-2 border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.4)_inset,0_0_30px_rgba(168,85,247,0.4)] [transform:rotateY(-90deg)_translateZ(128px)] rounded-xl" />
-                {/* Top */}
-                <div className="absolute inset-0 border-2 border-fuchsia-500/50 shadow-[0_0_30px_rgba(217,70,239,0.4)_inset,0_0_30px_rgba(217,70,239,0.4)] [transform:rotateX(90deg)_translateZ(128px)] rounded-xl" />
-                {/* Bottom */}
-                <div className="absolute inset-0 border-2 border-fuchsia-500/50 shadow-[0_0_30px_rgba(217,70,239,0.4)_inset,0_0_30px_rgba(217,70,239,0.4)] [transform:rotateX(-90deg)_translateZ(128px)] rounded-xl" />
-              </motion.div>
-            </div>
+            {/* Soft Pulsating Glow Behind Photo */}
+            <motion.div 
+              animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.8, 0.5] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-[60px] -z-10"
+            />
 
             <Image 
               src="/images/projects/profile.jpg" 
