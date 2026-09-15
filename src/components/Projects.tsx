@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Swiggy Sales Analysis Dashboard",
     description: "Interactive sales analysis dashboard built for Swiggy. Designed comprehensive data insights and visual analytics to track revenue and performance metrics.",
-    tech: ["Excel", "Data Analysis", "Dashboarding"],
+    tech: ["Excel", "Data Analysis", "Dashboarding", "Pivot Table"],
     image: "https://raw.githubusercontent.com/sidducv0528/Swiggy-Sales-Analysis-Dashboard/main/Assets/Swiggy_Thumbnail.png",
     github: "https://github.com/sidducv0528/Swiggy-Sales-Analysis-Dashboard",
     live: "https://onedrive.live.com/:x:/g/personal/CBF615F6CF8B4D72/IQC3o8yVFT9aTYvkOBoxL9JiAXMfOFXEnnTPoxHrWiEOqeo?resid=CBF615F6CF8B4D72!s95cca3b73f154d5a8be4381a312fd262&ithint=file%2Cxlsx&e=67fkd5&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy9jYmY2MTVmNmNmOGI0ZDcyL0lRQzNvOHlWRlQ5YVRZdmtPQm94TDlKaUFYTWZPRlhFbm5UUG94SHJXaUVPcWVvP2U9Njdma2Q1",
@@ -72,10 +72,10 @@ const projects = [
   {
     title: "Smart Feedback & Student Performance System",
     description: "Automated academic workflow tool: attendance/marks analysis, automated weekly reports, feedback form ticket generator, and web-based ticket tracker.",
-    tech: ["Google Apps Script", "JavaScript", "HTML/CSS"],
+    tech: ["Google Apps Script", "JavaScript", "HTML/CSS", "Excel", "Dashboard", "Automation"],
     image: "/images/projects/smart-feedback.png",
     github: "https://github.com/sidducv0528/Student-Performance-Issue-Management-System",
-    live: "",
+    live: "https://github.com/sidducv0528/Student-Performance-Issue-Management-System",
     video: "https://youtu.be/24SNZvqx7Ls?si=YrT_9Zojy_sGCjCJ",
   },
   {
@@ -89,7 +89,7 @@ const projects = [
   {
     title: "Bank Term Deposit Prediction",
     description: "Logistic Regression model to predict bank term deposits achieving an AUC of 0.992.",
-    tech: ["Python", "Logistic Regression"],
+    tech: ["Python", "Machine Learning", "Logistic Regression"],
     image: "/images/projects/bank-deposit.png",
     github: "https://github.com/sidducv0528/bank-deposit-prediction",
     live: "https://sidducv0528.github.io/ml-prediction-app/",
@@ -97,7 +97,7 @@ const projects = [
   {
     title: "Insurance Premium Prediction",
     description: "Linear Regression model for insurance premium prediction with an R² of 0.875.",
-    tech: ["Python", "Linear Regression"],
+    tech: ["Python", "Machine Learning", "Linear Regression"],
     image: "/images/projects/insurance.png",
     github: "https://github.com/sidducv0528/insurance-premium-prediction",
     live: "https://sidducv0528.github.io/ml-prediction-app/",
@@ -105,7 +105,7 @@ const projects = [
   {
     title: "Customer Churn Prediction",
     description: "Random Forest classification model for predicting customer churn with 80% accuracy.",
-    tech: ["Python", "Random Forest"],
+    tech: ["Python", "Machine Learning", "Random Forest"],
     image: "/images/projects/customer-churn.png",
     github: "https://github.com/sidducv0528/customer-churn-random-forest",
     live: "https://sidducv0528.github.io/ml-prediction-app/",
