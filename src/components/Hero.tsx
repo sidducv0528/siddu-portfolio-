@@ -195,20 +195,14 @@ export function Hero() {
               </motion.div>
             </div>
 
-            <motion.div
-              animate={{ y: [-15, 15, -15] }}
-              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="relative w-full h-full flex items-center justify-center z-10"
-            >
-              <Image 
-                src="/images/projects/profile.jpg" 
-                alt="V Siddu" 
-                fill 
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain drop-shadow-[0_0_40px_rgba(120,0,255,0.2)]" 
-                priority
-              />
-            </motion.div>
+            <Image 
+              src="/images/projects/profile.jpg" 
+              alt="V Siddu" 
+              fill 
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain drop-shadow-[0_0_40px_rgba(120,0,255,0.2)] relative z-10" 
+              priority
+            />
           </motion.div>
         </div>
       </div>
