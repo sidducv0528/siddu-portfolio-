@@ -159,7 +159,7 @@ export function Hero() {
         </motion.div>
 
         {/* Right Side: Visuals */}
-        <div className="relative h-[600px] w-full hidden lg:flex items-center justify-center">
+        <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center mt-8 lg:mt-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
