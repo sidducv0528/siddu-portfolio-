@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Walmart Sales Forecasting",
     description: "Built and deployed SARIMAX(1,1,1)(1,1,1,52) time-series models across all 45 Walmart stores, achieving ~3.66% MAPE. Shipped as a 6-page Streamlit dashboard.",
-    tech: ["Python", "SARIMAX", "Streamlit", "pandas"],
+    tech: ["Python", "SARIMAX", "Time Series Forecasting", "Streamlit", "pandas"],
     image: "https://raw.githubusercontent.com/sidducv0528/Walmart-Sales-Forecasting/main/assets/screenshots/walmart-sales-forecasting-banner.png",
     github: "https://github.com/sidducv0528/Walmart-Sales-Forecasting",
     live: "https://walmart-sales-forecasting-stores.streamlit.app/",
@@ -64,7 +64,7 @@ const projects = [
   {
     title: "ML Prediction Web App",
     description: "An interactive front-end simulation of 4 ML models' logic (churn, insurance, bank deposit, heart disease) — giving recruiters something clickable with zero setup.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
+    tech: ["HTML5", "CSS3", "JavaScript", "ML"],
     image: "/images/projects/ml-webapp.png",
     github: "https://github.com/sidducv0528/ml-prediction-app",
     live: "https://sidducv0528.github.io/ml-prediction-app",
