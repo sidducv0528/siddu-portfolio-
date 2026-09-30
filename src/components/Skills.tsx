@@ -79,58 +79,61 @@ export function Skills() {
           </p>
         </div>
 
-        <div className="space-y-12">
-          {skillCategories.map((category, catIdx) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: catIdx * 0.15 }}
-            >
-              <h3 className="text-xl font-medium mb-6 text-foreground/90 border-b border-glass-border pb-2 inline-block">
-                {category.title}
-              </h3>
-              
-              <motion.div 
-                variants={containerVariants}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                className="flex flex-wrap gap-4"
-              >
-                {category.skills.map((skill) => {
-                  const Icon = skill.icon;
-                  return (
+        <div className="space-y-12 overflow-hidden">
+          {skillCategories.map((category, catIdx) => {
+            const isEven = catIdx % 2 === 0;
+            return (
+              <div key={category.title} className="relative w-full">
+                <h3 className="text-xl font-medium mb-6 text-foreground/90 border-b border-glass-border pb-2 inline-block">
+                  {category.title}
+                </h3>
+                
+                {/* Marquee Container with fade masks */}
+                <div className="relative flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] group">
+                  {[...Array(2)].map((_, i) => (
                     <motion.div
-                      key={skill.name}
-                      variants={itemVariants}
-                      whileHover={{ y: -4, scale: 1.05 }}
-                      className="group relative flex items-center gap-3 bg-secondary/5 dark:bg-background/40 hover:bg-background/80 border border-glass-border rounded-xl px-5 py-3 cursor-default transition-colors duration-300 overflow-hidden"
-                      style={{"--hover-color": skill.color} as React.CSSProperties}
+                      key={i}
+                      className="flex shrink-0 gap-4 pr-4"
+                      animate={{ x: isEven ? ["0%", "-100%"] : ["-100%", "0%"] }}
+                      transition={{ 
+                        duration: 30, 
+                        ease: "linear", 
+                        repeat: Infinity 
+                      }}
                     >
-                      {/* Glow effect that appears on hover using the CSS variable */}
-                      <div 
-                        className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
-                        style={{ backgroundColor: skill.color }}
-                      />
-                      
-                      {/* Left glowing border on hover */}
-                      <div 
-                        className="absolute left-0 top-0 bottom-0 w-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        style={{ backgroundColor: skill.color }}
-                      />
+                      {category.skills.map((skill) => {
+                        const Icon = skill.icon;
+                        return (
+                          <div
+                            key={skill.name}
+                            className="group/card relative flex items-center gap-3 bg-secondary/5 dark:bg-background/40 hover:bg-background/80 border border-glass-border rounded-xl px-5 py-3 cursor-default transition-all duration-300 overflow-hidden shrink-0 hover:-translate-y-1 hover:shadow-lg"
+                            style={{"--hover-color": skill.color} as React.CSSProperties}
+                          >
+                            <div 
+                              className="absolute inset-0 opacity-0 group-hover/card:opacity-10 transition-opacity duration-300 pointer-events-none"
+                              style={{ backgroundColor: skill.color }}
+                            />
+                            
+                            <div 
+                              className="absolute left-0 top-0 bottom-0 w-1 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+                              style={{ backgroundColor: skill.color }}
+                            />
 
-                      <div className="transition-transform duration-300 group-hover:scale-110">
-                        <Icon size={22} style={{ color: skill.color }} />
-                      </div>
-                      <span className="font-semibold text-sm tracking-wide text-foreground/90 group-hover:text-foreground transition-colors">
-                        {skill.name}
-                      </span>
+                            <div className="transition-transform duration-300 group-hover/card:scale-110">
+                              <Icon size={22} style={{ color: skill.color }} />
+                            </div>
+                            <span className="font-semibold text-sm tracking-wide text-foreground/90 group-hover/card:text-foreground transition-colors whitespace-nowrap">
+                              {skill.name}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </motion.div>
-                  );
-                })}
-              </motion.div>
-            </motion.div>
-          ))}
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
