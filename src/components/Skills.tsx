@@ -52,18 +52,18 @@ export function Skills() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 15, scale: 0.95 },
+    hidden: { opacity: 0, y: -40, scale: 0.9 },
     visible: { 
       opacity: 1, 
       y: 0, 
       scale: 1,
-      transition: { type: "spring", stiffness: 120, damping: 12 }
+      transition: { type: "spring", stiffness: 100, damping: 10 }
     },
   };
 

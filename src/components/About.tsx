@@ -14,7 +14,7 @@ export function About() {
 
   const stats = [
     { label: "Portfolio Projects", value: 12, suffix: "+", icon: FolderGit2, color: "text-blue-500" },
-    { label: "LinkedIn Connections", value: 500, suffix: "+", icon: Users, color: "text-indigo-500" },
+    { label: "LinkedIn Connections", value: 700, suffix: "+", icon: Users, color: "text-indigo-500" },
     { label: "CGPA (Expected)", value: 8.5, suffix: "", decimals: 1, icon: GraduationCap, color: "text-emerald-500" },
     { label: "Records Analyzed", value: 400, suffix: "K+", icon: Database, color: "text-orange-500" },
   ];
