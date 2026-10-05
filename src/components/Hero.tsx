@@ -172,7 +172,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-center gap-5 pt-6 text-gray-500 dark:text-white/50">
-            <a href="https://linkedin.com/in/siddu-varikuppala" target="_blank" rel="noreferrer" className="hover:text-blue-600 dark:hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/siddu-data/" target="_blank" rel="noreferrer" className="hover:text-blue-600 dark:hover:text-white transition-colors">
               <LinkedinIcon style={{ width: 22, height: 22 }} />
             </a>
             <a href="https://github.com/sidducv0528" target="_blank" rel="noreferrer" className="hover:text-gray-900 dark:hover:text-white transition-colors">
