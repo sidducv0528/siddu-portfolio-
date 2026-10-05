@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
 import { SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras } from "react-icons/si";
-import { FaDatabase, FaChartLine, FaChartArea, FaFileExcel, FaRobot, FaCode, FaBrain, FaNetworkWired, FaChartBar } from "react-icons/fa";
+import { FaDatabase, FaChartLine, FaChartArea, FaFileExcel, FaRobot, FaCode, FaBrain, FaNetworkWired, FaChartBar, FaProjectDiagram } from "react-icons/fa";
 
 const skillCategories = [
   {
@@ -19,6 +19,7 @@ const skillCategories = [
       { name: "Pandas", icon: SiPandas, color: "#150458" },
       { name: "NumPy", icon: SiNumpy, color: "#013243" },
       { name: "Scikit-Learn", icon: SiScikitlearn, color: "#F7931E" },
+      { name: "XGBoost", icon: FaProjectDiagram, color: "#124B8B" },
       { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
       { name: "Keras", icon: SiKeras, color: "#D00000" },
       { name: "Matplotlib", icon: FaChartLine, color: "#11557c" },
