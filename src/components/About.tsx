@@ -26,6 +26,9 @@ export function About() {
     "DAX",
     "Excel",
     "Machine Learning",
+    "Deep Learning",
+    "NLP",
+    "Transformers",
     "Data Visualization",
   ];
 

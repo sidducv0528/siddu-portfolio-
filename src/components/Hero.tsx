@@ -49,6 +49,7 @@ export function Hero() {
     "Statistics & Data Science",
     "Power BI Developer",
     "Machine Learning",
+    "Deep Learning & NLP",
     "Vibe Coder",
     "AI Tools Expert",
   ];

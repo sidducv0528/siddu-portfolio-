@@ -2,8 +2,8 @@
 
 import React, { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
-import { SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras } from "react-icons/si";
-import { FaDatabase, FaChartLine, FaChartArea, FaFileExcel, FaRobot, FaCode, FaBrain, FaNetworkWired, FaChartBar, FaProjectDiagram } from "react-icons/fa";
+import { SiPython, SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras, SiHuggingface } from "react-icons/si";
+import { FaDatabase, FaChartLine, FaChartArea, FaFileExcel, FaRobot, FaCode, FaBrain, FaNetworkWired, FaChartBar, FaProjectDiagram, FaLanguage } from "react-icons/fa";
 
 const skillCategories = [
   {
@@ -22,6 +22,7 @@ const skillCategories = [
       { name: "XGBoost", icon: FaProjectDiagram, color: "#124B8B" },
       { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
       { name: "Keras", icon: SiKeras, color: "#D00000" },
+      { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E" },
       { name: "Matplotlib", icon: FaChartLine, color: "#11557c" },
       { name: "Seaborn", icon: FaChartArea, color: "#4C72B0" },
     ]
@@ -39,7 +40,9 @@ const skillCategories = [
     title: "Core Concepts",
     skills: [
       { name: "Machine Learning", icon: FaBrain, color: "#10b981" },
-      { name: "Deep Learning Fundamentals", icon: FaNetworkWired, color: "#3b82f6" },
+      { name: "Deep Learning", icon: FaNetworkWired, color: "#3b82f6" },
+      { name: "NLP", icon: FaLanguage, color: "#8b5cf6" },
+      { name: "Transformers", icon: SiHuggingface, color: "#FFD21E" },
     ]
   }
 ];
