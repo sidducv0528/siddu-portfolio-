@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { TypewriterEffect } from "./ui/TypewriterEffect";
 import { ParticleBackground } from "./ui/ParticleBackground";
-import { ArrowRight, Download, Mail, Database, ChartBar, Activity, ChevronDown } from "lucide-react";
+import { ArrowRight, Download, Mail, Database, ChartBar, Activity, ChevronDown, Network, Languages, Sparkles } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./ui/Icons";
 import Image from "next/image";
 
@@ -49,7 +49,8 @@ export function Hero() {
     "Statistics & Data Science",
     "Power BI Developer",
     "Machine Learning",
-    "Deep Learning & NLP",
+    "Deep Learning",
+    "NLP & Transformers",
     "Vibe Coder",
     "AI Tools Expert",
   ];
@@ -87,7 +88,7 @@ export function Hero() {
           </div>
 
           <p className="text-base md:text-lg text-gray-600 dark:text-white/70 max-w-xl leading-relaxed">
-            Turn data into meaningful insights using Python, SQL, Machine Learning and Data Visualization. I am passionate about solving real-world problems and building impactful data-driven solutions.
+            Turn data into meaningful insights using Python, SQL, Machine Learning, Deep Learning, NLP, and Data Visualization. I am passionate about solving real-world problems and building impactful data-driven solutions.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -99,6 +100,15 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/50 dark:bg-[#0a0f1c]/80 text-sm font-medium text-gray-800 dark:text-white border border-gray-300 dark:border-white/10 backdrop-blur-sm">
               <Activity size={16} className="text-indigo-600 dark:text-indigo-400" /> Machine Learning
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/50 dark:bg-[#0a0f1c]/80 text-sm font-medium text-gray-800 dark:text-white border border-gray-300 dark:border-white/10 backdrop-blur-sm">
+              <Network size={16} className="text-emerald-600 dark:text-emerald-400" /> Deep Learning
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/50 dark:bg-[#0a0f1c]/80 text-sm font-medium text-gray-800 dark:text-white border border-gray-300 dark:border-white/10 backdrop-blur-sm">
+              <Languages size={16} className="text-purple-600 dark:text-purple-400" /> NLP
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/50 dark:bg-[#0a0f1c]/80 text-sm font-medium text-gray-800 dark:text-white border border-gray-300 dark:border-white/10 backdrop-blur-sm">
+              <Sparkles size={16} className="text-amber-500 dark:text-amber-400" /> Transformers
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/50 dark:bg-[#0a0f1c]/80 text-sm font-medium text-gray-800 dark:text-white border border-gray-300 dark:border-white/10 backdrop-blur-sm">
               <ChartBar size={16} className="text-blue-600 dark:text-blue-400" /> Data Visualization
