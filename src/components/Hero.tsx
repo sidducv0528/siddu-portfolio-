@@ -51,8 +51,8 @@ export function Hero() {
     "Machine Learning",
     "Deep Learning",
     "NLP & Transformers",
-    "Vibe Coder",
-    "AI Tools Expert",
+    
+    
   ];
 
   return (
@@ -189,7 +189,7 @@ export function Hero() {
             <a href="https://github.com/sidducv0528" target="_blank" rel="noreferrer" className="hover:text-gray-900 dark:hover:text-white transition-colors">
               <GithubIcon style={{ width: 22, height: 22 }} />
             </a>
-            <a href="mailto:john@example.com" className="hover:text-purple-600 dark:hover:text-white transition-colors">
+            <a href="mailto:sidducv0528@gmail.com" className="hover:text-purple-600 dark:hover:text-white transition-colors">
               <Mail size={22} />
             </a>
           </div>
