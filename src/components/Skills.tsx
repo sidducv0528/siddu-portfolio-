@@ -33,7 +33,7 @@ const skillCategories = [
       { name: "Power BI", icon: FaChartBar, color: "#F2C811" },
       { name: "Excel", icon: FaFileExcel, color: "#217346" },
       { name: "AI Tools", icon: FaRobot, color: "#6366f1" },
-      { name: "Vibe Coder", icon: FaCode, color: "#ec4899" },
+      
     ]
   },
   {
