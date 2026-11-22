@@ -6,7 +6,7 @@ import { GraduationCap, Award, BookOpen, ShieldCheck, ExternalLink, Laptop, Brie
 
 const educationData = [
   {
-    title: "Data Science Internship",
+    title: "Python with Data Analytics — Training & Internship Programme",
     institution: "QSpiders",
     duration: "Present",
     details: "Currently gaining hands-on industry experience as a Data Science Intern.",
@@ -33,7 +33,7 @@ const educationData = [
     bgColor: "bg-accent/10",
   },
   {
-    title: "Hackathon Participant",
+    title: "Data Analytics Intern", institution: "AICTE-IBM SkillsBuild", duration: "2026", details: "45-day data analytics internship with AICTE-IBM SkillsBuild.", icon: <Briefcase size={24} />, color: "text-accent", bgColor: "bg-accent/10", }, { title: "Hackathon Participant",
     institution: "Open Innovation",
     duration: "Completed",
     details: "Collaborated and competed to build innovative data-driven solutions.",
@@ -42,7 +42,7 @@ const educationData = [
     bgColor: "bg-primary/10",
   },
   {
-    title: "B.Sc. (Honours) Mathematics, Statistics & Computer Science",
+    title: "B.Sc. (Honours) Mathematics, Statistics & Data Science",
     institution: "A.V. Arts, Science and Commerce College",
     duration: "Expected 2027",
     details: "Current CGPA: 8.5 (3rd Year). Deep dive into statistical modeling, mathematics, and core computer science.",
