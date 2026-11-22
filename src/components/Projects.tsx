@@ -27,7 +27,7 @@ const projects = [
     video: "https://youtu.be/6xxJtfTGDLE?si=80qTR1hQJnA8TDt2",
   },
   {
-    title: "Walmart Sales Forecasting",
+    title: "Olist E-Commerce Analytics", description: "Olist Brazilian e-commerce analytics (AICTE-IBM internship) — data cleaning, EDA, RFM segmentation and churn-risk modelling in Python.", tech: ["Python", "EDA", "RFM", "Churn", "Streamlit"], image: "https://raw.githubusercontent.com/sidducv0528/olist-ecommerce-analytics/main/banner.png", github: "https://github.com/sidducv0528/olist-ecommerce-analytics", live: "https://bank-deposit-prediction-t7rvzukgnrhlewkzl46dyy.streamlit.app/", }, { title: "Walmart Sales Forecasting",
     description: "Built and deployed SARIMAX(1,1,1)(1,1,1,52) time-series models across all 45 Walmart stores, achieving ~3.66% MAPE. Shipped as a 6-page Streamlit dashboard.",
     tech: ["Python", "SARIMAX", "Time Series Forecasting", "Streamlit", "pandas"],
     image: "https://raw.githubusercontent.com/sidducv0528/Walmart-Sales-Forecasting/main/assets/screenshots/walmart-sales-forecasting-banner.png",
@@ -37,12 +37,12 @@ const projects = [
   },
   {
     title: "Swiggy Sales Analysis Dashboard",
-    description: "Interactive sales analysis dashboard built for Swiggy. Designed comprehensive data insights and visual analytics to track revenue and performance metrics.",
+    description: "Interactive sales analysis dashboard built for Swiggy. Designed comprehensive data insights and visual analytics to track revenue and performance metrics. 197K+ orders • ₹53.01M sales • AOV ₹268.34 • Avg rating 4.34.",
     tech: ["Excel", "Data Analysis", "Dashboarding", "Pivot Table"],
     image: "https://raw.githubusercontent.com/sidducv0528/Swiggy-Sales-Analysis-Dashboard/main/Assets/Swiggy_Thumbnail.png",
     github: "https://github.com/sidducv0528/Swiggy-Sales-Analysis-Dashboard",
     live: "https://onedrive.live.com/:x:/g/personal/CBF615F6CF8B4D72/IQC3o8yVFT9aTYvkOBoxL9JiAXMfOFXEnnTPoxHrWiEOqeo?resid=CBF615F6CF8B4D72!s95cca3b73f154d5a8be4381a312fd262&ithint=file%2Cxlsx&e=67fkd5&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy9jYmY2MTVmNmNmOGI0ZDcyL0lRQzNvOHlWRlQ5YVRZdmtPQm94TDlKaUFYTWZPRlhFbm5UUG94SHJXaUVPcWVvP2U9Njdma2Q1",
-    video: "https://youtu.be/qVFuM5_s5vI?si=5Zet9tCXfp6FDGH-",
+    liveLabel: "Download Workbook", video: "https://youtu.be/qVFuM5_s5vI?si=5Zet9tCXfp6FDGH-",
   },
   {
     title: "Used Phone Resale Price Predictor",
@@ -55,11 +55,11 @@ const projects = [
   },
   {
     title: "IPL 2026 — From Ball to Trophy",
-    description: "End-to-end analysis of the full IPL 2026 season — 17,477 records — from raw CSVs to an interactive Excel dashboard. Published as a dataset + notebook on Kaggle.",
+    description: "End-to-end analysis of the full IPL 2026 season — 74 matches, 17,477 ball-by-ball records analysed in Python + Excel.",
     tech: ["Python", "Pandas", "Excel", "Kaggle"],
     image: "/images/projects/ipl.png",
     github: "https://github.com/sidducv0528/IPL-2026-Performance-Analytics",
-    live: "https://github.com/sidducv0528/IPL-2026-Performance-Analytics",
+    live: "https://github.com/sidducv0528/IPL-2026-Performance-Analytics", liveLabel: "View Code",
   },
   {
     title: "ML Prediction Web App",
@@ -75,7 +75,7 @@ const projects = [
     tech: ["Google Apps Script", "JavaScript", "HTML/CSS", "Excel", "Dashboard", "Automation"],
     image: "/images/projects/smart-feedback.png",
     github: "https://github.com/sidducv0528/Student-Performance-Issue-Management-System",
-    live: "https://github.com/sidducv0528/Student-Performance-Issue-Management-System",
+    live: "https://script.google.com/macros/s/AKfycbylG7dAZqwKu9vtdN43snP2M2GK4mvBrDja6zpKpMB0qW_7BXWtq25zfI4qNkgcwFSq/exec",
     video: "https://youtu.be/24SNZvqx7Ls?si=YrT_9Zojy_sGCjCJ",
   },
   {
@@ -248,7 +248,7 @@ function ProjectCard({ project, index, isIdle }: { project: any; index: number; 
                   target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-full bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background hover:shadow-[0_0_15px_rgba(79,70,229,0.4)] transition-all"
                 >
-                  <ExternalLink size={14} /> Live Demo
+                  <ExternalLink size={14} /> {project.liveLabel || "Live Demo"}
                 </motion.a>
               )}
               {project.video && (
