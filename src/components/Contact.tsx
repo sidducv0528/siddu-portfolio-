@@ -89,7 +89,7 @@ export function Contact() {
                     required
                     suppressHydrationWarning
                     className="w-full px-4 py-3 rounded-xl bg-background/50 border border-glass-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="you@example.com"
                   />
                 </div>
               </div>
