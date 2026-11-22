@@ -22,7 +22,7 @@ const skillCategories = [
       { name: "XGBoost", icon: FaProjectDiagram, color: "#124B8B" },
       { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
       { name: "Keras", icon: SiKeras, color: "#D00000" },
-      { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E" },
+      
       { name: "Matplotlib", icon: FaChartLine, color: "#11557c" },
       { name: "Seaborn", icon: FaChartArea, color: "#4C72B0" },
     ]
